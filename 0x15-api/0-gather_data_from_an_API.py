@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
-a script that, using this REST API, for a given employee ID, 
-returns information about his/her 
+a script that, using this REST API, for a given employee ID,
+returns information about his/her
 TODO list progress.
 """
 
@@ -10,7 +10,7 @@ from sys import argv
 
 if __name__ == '__main__':
     base_url = 'https://jsonplaceholder.typicode.com'
-    todos_url = base_url + "/user/{}/todos".format(argv[1])
+    todos_url = base_url + "/users/{}/todos".format(argv[1])
     user_url = base_url + "/users/{}".format(argv[1])
     todos_result = get(todos_url).json()
     name_result = get(user_url).json()
